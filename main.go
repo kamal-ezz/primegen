@@ -6,6 +6,7 @@ import (
 	"math"
 	"os"
 	"strconv"
+	"time"
 )
 
 
@@ -93,5 +94,10 @@ func main(){
 		fmt.Println("Please provide a valid number")
 	}
 
+	start := time.Now()
 	printPrimes(i,j)
+	elapsed := time.Since(start)
+
+
+	fmt.Println("Finished after", elapsed)
 }
